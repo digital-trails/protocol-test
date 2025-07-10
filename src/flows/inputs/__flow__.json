@@ -1,4 +1,8 @@
 {
-	"mode": "select",
-	"text": "Select an Element below to view"
+	"type": "select",
+	"text": "Select an Element below to view",
+	"selections": {
+		"Slider": "Slider.json",
+		"LABEL": "Label.json"
+	}
 }
