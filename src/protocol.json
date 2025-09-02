@@ -108,9 +108,6 @@
       "icon": "/assets/menu_home.png"
     }
   ],
-  "settings": {
-    "configs": "flow://flows/configs"
-  },
   "triggers": [
     {
       "type": "timing",
