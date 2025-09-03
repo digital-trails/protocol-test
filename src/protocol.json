@@ -121,8 +121,8 @@
       "type": "timing",
       "action": "notification",
       "frequency": "1",
+      "time": "08:00",
       "content": {
-        "time": "08:00",
         "path": "flow://flows/survey2",
         "expiry": "11:00"
       }
