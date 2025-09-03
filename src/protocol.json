@@ -133,6 +133,7 @@
       "frequency": "00:05:00",
       "action": {
         "type": "notification",
+        "survey": true,
         "path": "flow://flows/survey1",
         "title": "Survey Alert!",
         "message": "It's time for your survey1 survey"
@@ -144,6 +145,7 @@
       "time": "08:00",
       "content": {
         "type": "notification",
+        "survey": true,
         "path": "flow://flows/survey2",
         "expiry": "11:00",
         "title": "Survey Alert!",
@@ -157,6 +159,7 @@
       "contents": [
         {
           "type": "notification",
+          "survey": true,
           "path": "flow://flows/random1",
           "expiry": "11:00",
           "title": "Survey Alert!",
@@ -164,6 +167,7 @@
         },
         {
           "type": "notification",
+          "survey": true,
           "path": "flow://flows/random2",
           "expiry": "11:00",
           "title": "Survey Alert!",
@@ -171,6 +175,7 @@
         },
         {
           "type": "notification",
+          "survey": true,
           "path": "flow://flows/random3",
           "title": "Survey Alert!",
           "message": "It's time for your random3 survey"
