@@ -155,13 +155,13 @@
     {
       "type": "random",
       "days": 7,
-      "time": "${random_time}",
+      "time": "15:00",
       "contents": [
         {
           "type": "notification",
           "survey": true,
           "path": "flow://flows/random1",
-          "expiry": "11:00",
+          "expiry": "18:00",
           "title": "Survey Alert!",
           "message": "It's time for your random1 survey"
         },
@@ -169,7 +169,7 @@
           "type": "notification",
           "survey": true,
           "path": "flow://flows/random2",
-          "expiry": "11:00",
+          "expiry": "18:00",
           "title": "Survey Alert!",
           "message": "It's time for your random2 survey"
         },
@@ -177,6 +177,7 @@
           "type": "notification",
           "survey": true,
           "path": "flow://flows/random3",
+          "expiry": "18:00",
           "title": "Survey Alert!",
           "message": "It's time for your random3 survey"
         }
