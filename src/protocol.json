@@ -108,28 +108,36 @@
       "icon": "/assets/menu_home.png"
     }
   ],
+  "settings": {
+    "configs": "flow://flows/configs.json"
+  },
   "triggers": [
     {
+      "id": "trigger_1",
       "type": "Reminder",
-      "remindertype": "click",
       "threshold": "2.00:00:00",
-      "actions": [
-        {
-          "type": "notification",
-          "path": "flow://flows/random1",
-          "title": "Reminder Alert!",
-          "message": "We noticed you haven’t completed your random1"
-        },
-        {
-          "type": "notification",
-          "path": "flow://flows/survey2",
-          "title": "Reminder Alert!",
-          "message": "We noticed you haven’t completed your survey2"
-        }
-      ]
+      "action": {
+        "type": "list",
+        "listtype": "sequential",
+        "actions": [
+          {
+            "type": "notification",
+            "path": "flow://flows/random1",
+            "title": "Reminder Alert!",
+            "message": "We noticed you haven’t completed your random1"
+          },
+          {
+            "type": "notification",
+            "path": "flow://flows/survey2",
+            "title": "Reminder Alert!",
+            "message": "We noticed you haven’t completed your survey2"
+          }
+        ]
+      }
     },
     {
       "type": "timing",
+      "id": "trigger_2",
       "frequency": "00:05:00",
       "action": {
         "type": "notification",
@@ -140,10 +148,11 @@
       }
     },
     {
+      "id": "trigger_3",
       "type": "timing",
       "frequency": "1",
       "time": "08:00",
-      "content": {
+      "action": {
         "type": "notification",
         "survey": true,
         "path": "flow://flows/survey2",
@@ -153,35 +162,41 @@
       }
     },
     {
+      "id": "trigger_4",
       "type": "random",
       "days": 7,
-      "time": "15:00",
-      "contents": [
-        {
-          "type": "notification",
-          "survey": true,
-          "path": "flow://flows/random1",
-          "expiry": "18:00",
-          "title": "Survey Alert!",
-          "message": "It's time for your random1 survey"
-        },
-        {
-          "type": "notification",
-          "survey": true,
-          "path": "flow://flows/random2",
-          "expiry": "18:00",
-          "title": "Survey Alert!",
-          "message": "It's time for your random2 survey"
-        },
-        {
-          "type": "notification",
-          "survey": true,
-          "path": "flow://flows/random3",
-          "expiry": "18:00",
-          "title": "Survey Alert!",
-          "message": "It's time for your random3 survey"
-        }
-      ]
+      "choose": 3,
+      "time": "${random_time, 15:00}",
+      "action": {
+        "type": "list",
+        "listtype": "random",
+        "actions": [
+          {
+            "type": "notification",
+            "survey": true,
+            "path": "flow://flows/random1",
+            "expiry": "18:00",
+            "title": "Survey Alert!",
+            "message": "It's time for your random1 survey"
+          },
+          {
+            "type": "notification",
+            "survey": true,
+            "path": "flow://flows/random2",
+            "expiry": "18:00",
+            "title": "Survey Alert!",
+            "message": "It's time for your random2 survey"
+          },
+          {
+            "type": "notification",
+            "survey": true,
+            "path": "flow://flows/random3",
+            "expiry": "18:00",
+            "title": "Survey Alert!",
+            "message": "It's time for your random3 survey"
+          }
+        ]
+      }
     }
   ],
   "probes": [
@@ -225,6 +240,8 @@
           ],
           "triggers": [
             {
+              "id": "trigger_5",
+              "type": "device",
               "timewindowdays": 1,
               "aggregation": "sum",
               "condition": [
@@ -232,13 +249,15 @@
                 ">",
                 "36000"
               ],
-              "content": {
-                "type": "notification",
-                "title": "Tracker Alert!",
-                "message": "Hi! We’ve noticed your tracker hasn’t recorded much data over the past two days. Please try to wear it as much as possible—ideally all day. If it’s not working or you’re having trouble, let us know so we can help."
-              }
+              "action":  {
+                  "type": "notification",
+                  "title": "Tracker Alert!",
+                  "message": "Hi! We’ve noticed your tracker hasn’t recorded much data over the past two days. Please try to wear it as much as possible—ideally all day. If it’s not working or you’re having trouble, let us know so we can help."
+                }
             },
             {
+              "id": "trigger_6",
+              "type": "device",
               "timewindowdays": 1,
               "aggregation": "sum",
               "condition": [
@@ -246,11 +265,11 @@
                 "<",
                 "2000"
               ],
-              "content": {
-                "type": "notification",
-                "title": "Tracker Alert!",
-                "message": "Hi! Your step count is low, make sure you to walk and stay active."
-              }
+              "action": {
+                  "type": "notification",
+                  "title": "Tracker Alert!",
+                  "message": "Hi! Your step count is low, make sure you to walk and stay active."
+                }
             }
           ]
         }
