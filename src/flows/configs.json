@@ -6,6 +6,7 @@
         },
         {
             "type": "Time", 
+            "default_time": "15:00",
             "open": "12:00",
             "close": "17:00",
             "variable_name":"global:random_time"
