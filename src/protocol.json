@@ -1,5 +1,9 @@
 {
-  "icon": "/assets/home_mindtrails.png",
+  "summary": {
+    "icon": "/assets/home_mindtrails.png",
+    "title": "TestProtocol",
+    "description": "This is a test protocol"
+  },
   "home": {
     "title": "MindTrails",
     "element": {
@@ -11,26 +15,26 @@
         {
           "type": "sessions",
           "left": {
-            "text": "{0} Sessions Completed",
+            "text": "{       0     }SessionsCompleted",
             "icon": {
               "url": "/assets/completed.png",
               "tint": false
             }
           },
           "right": {
-            "text": "Launch Session",
+            "text": "LaunchSession",
             "icon": {
               "url": "/assets/unlocked.png",
               "tint": false
             },
-            "action": "flow://flows/doses"
+            "action": "flow: //flows/doses"
           }
         },
         {
           "type": "button",
           "action": {
-            "text": "Show Survey Modal",
-            "action": "navmodal://Survey"
+            "text": "ShowSurveyModal",
+            "action": "navmodal: //Survey"
           }
         },
         {
@@ -39,28 +43,28 @@
             {
               "text": "inputs!",
               "icon": "/assets/home_mindtrails.png",
-              "action": "flow://flows/inputs",
+              "action": "flow: //flows/inputs",
               "backgroundcolor": "#1A206AFF",
               "markcompleted": true
             },
             {
-              "text": "survey 1",
+              "text": "survey1",
               "icon": "/assets/home_instructions.png",
-              "action": "flow://flows/how%20was%20your%20day%3f",
+              "action": "flow: //flows/how%20was%20your%20day%3f",
               "backgroundcolor": "#1A00E05A",
               "markcompleted": true
             },
             {
-              "text": "survey 2",
+              "text": "survey2",
               "icon": "/assets/home_resources.png",
-              "action": "flow://flows/survey2",
+              "action": "flow: //flows/survey2",
               "backgroundcolor": "#1A00C2FF",
               "markcompleted": true
             },
             {
-              "text": "survey 3",
+              "text": "survey3",
               "icon": "/assets/home_anxiety.png",
-              "action": "flow://flows/survey3",
+              "action": "flow: //flows/survey3",
               "backgroundcolor": "#1A5C2FDA",
               "markcompleted": true
             }
@@ -72,28 +76,28 @@
             {
               "text": "inputs!",
               "icon": "/assets/home_mindtrails.png",
-              "action": "flow://flows/inputs",
+              "action": "flow: //flows/inputs",
               "backgroundcolor": "#1A206AFF",
               "markcompleted": true
             },
             {
-              "text": "survey 1",
+              "text": "survey1",
               "icon": "/assets/home_instructions.png",
-              "action": "flow://flows/how%20was%20your%20day%3F",
+              "action": "flow: //flows/how%20was%20your%20day%3F",
               "backgroundcolor": "#1A00E05A",
               "markcompleted": true
             },
             {
-              "text": "survey 2",
+              "text": "survey2",
               "icon": "/assets/home_resources.png",
-              "action": "flow://flows/survey2",
+              "action": "flow: //flows/survey2",
               "backgroundcolor": "#1A00C2FF",
               "markcompleted": true
             },
             {
-              "text": "survey 3",
+              "text": "survey3",
               "icon": "/assets/home_anxiety.png",
-              "action": "flow://flows/survey3",
+              "action": "flow: //flows/survey3",
               "backgroundcolor": "#1A5C2FDA",
               "markcompleted": true
             }
@@ -109,28 +113,28 @@
     }
   ],
   "settings": {
-    "configs": "flow://flows/configs.json"
+    "configs": "flow: //flows/configs.json"
   },
   "triggers": [
     {
       "id": "trigger_1",
       "type": "Reminder",
-      "threshold": "2.00:00:00",
+      "threshold": "2.00: 00: 00",
       "action": {
         "type": "list",
         "listtype": "sequential",
         "actions": [
           {
             "type": "notification",
-            "path": "flow://flows/random1",
-            "title": "Reminder Alert!",
-            "message": "We noticed you haven’t completed your random1"
+            "path": "flow: //flows/random1",
+            "title": "ReminderAlert!",
+            "message": "Wenoticedyouhaven’tcompletedyourrandom1"
           },
           {
             "type": "notification",
-            "path": "flow://flows/survey2",
-            "title": "Reminder Alert!",
-            "message": "We noticed you haven’t completed your survey2"
+            "path": "flow: //flows/survey2",
+            "title": "ReminderAlert!",
+            "message": "Wenoticedyouhaven’tcompletedyoursurvey2"
           }
         ]
       }
@@ -138,12 +142,12 @@
     {
       "type": "timing",
       "id": "trigger_2",
-      "frequency": "00:05:00",
+      "frequency": "00: 05: 00",
       "action": {
         "type": "notification",
         "survey": true,
-        "path": "flow://flows/survey1",
-        "title": "Survey Alert!",
+        "path": "flow: //flows/survey1",
+        "title": "SurveyAlert!",
         "message": "It's time for your survey1 survey"
       }
     },
@@ -158,7 +162,7 @@
         "path": "flow://flows/survey2",
         "expiry": "11:00",
         "title": "Survey Alert!",
-        "message": "It's time for your survey2 survey"
+        "message": "It'stimeforyoursurvey2survey"
       }
     },
     {
@@ -166,7 +170,7 @@
       "type": "random",
       "days": 7,
       "choose": 3,
-      "time": "${random_time,15:00}",
+      "time": "${       random_time,       15: 00     }",
       "action": {
         "type": "list",
         "listtype": "random",
@@ -174,9 +178,9 @@
           {
             "type": "notification",
             "survey": true,
-            "path": "flow://flows/random1",
-            "expiry": "18:00",
-            "title": "Survey Alert!",
+            "path": "flow: //flows/random1",
+            "expiry": "18: 00",
+            "title": "SurveyAlert!",
             "message": "It's time for your random1 survey"
           },
           {
@@ -185,14 +189,14 @@
             "path": "flow://flows/random2",
             "expiry": "18:00",
             "title": "Survey Alert!",
-            "message": "It's time for your random2 survey"
+            "message": "It'stimeforyourrandom2survey"
           },
           {
             "type": "notification",
             "survey": true,
-            "path": "flow://flows/random3",
-            "expiry": "18:00",
-            "title": "Survey Alert!",
+            "path": "flow: //flows/random3",
+            "expiry": "18: 00",
+            "title": "SurveyAlert!",
             "message": "It's time for your random3 survey"
           }
         ]
@@ -259,8 +263,8 @@
             {
               "lower-bound": 0,
               "upper-bound": 0.6,
-              "text": "You're missing several doses. Please try to take your medication more consistently.",
-              "summary": "Low Adherence",
+              "text": "You'remissingseveraldoses.Pleasetrytotakeyourmedicationmoreconsistently.",
+              "summary": "LowAdherence",
               "color": "#ff9187"
             },
             {
@@ -273,8 +277,8 @@
             {
               "lower-bound": 0.8,
               "upper-bound": 1,
-              "text": "You're consistently taking your medication. Keep it up!",
-              "summary": "High Adherence",
+              "text": "You'reconsistentlytakingyourmedication.Keepitup!",
+              "summary": "HighAdherence",
               "color": "#65bf65"
             }
           ]
