@@ -212,45 +212,6 @@
   ],
   "devices": [
     {
-      "type": "Fitbit",
-      "channel": "Api",
-      "path": "https://api.fitbit.com/1/user/-",
-      "endpoints": [
-        {
-          "path": "activities/steps",
-          "days": 10,
-          "writesdatum": true,
-          "goals": [
-            {
-              "type": "percentile",
-              "show-loading": true,
-              "field": "steps",
-              "days": 10,
-              "percentile": 0.6
-            }
-          ],
-          "triggers": [
-            {
-              "id": "trigger_6",
-              "type": "device",
-              "timewindowdays": 1,
-              "aggregation": "sum",
-              "condition": [
-                "steps",
-                "<",
-                "2000"
-              ],
-              "action": {
-                "type": "notification",
-                "title": "Tracker Alert!",
-                "message": "Hi! Your step count is low, make sure you to walk and stay active."
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
       "type": "WisePill",
       "channel": "Webhook",
       "goals": [
