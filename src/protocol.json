@@ -1,8 +1,17 @@
 {
-  "summary": {
-    "icon": "/assets/home_banner.png",
-    "title": "TestProtocol",
-    "description": "This is a test protocol"
+  "theme_light": {
+    "accent": "#007BFF",
+    "text": "#424242",
+    "primary": "#F5F5F5",
+    "secondary": "#FFFFFF",
+    "secondarybutton": "#EEEEEE"
+  },
+  "theme_dark": {
+    "accent": "#66B2FF",
+    "text": "#FFFFFF",
+    "primary": "#121212",
+    "secondary": "#202020",
+    "secondarybutton": "#333333"
   },
   "home": {
     "element": {
