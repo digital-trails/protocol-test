@@ -6,7 +6,8 @@
 			"text":"Default Height"
 		},
         {
-            "type": "Entry"
+            "type": "Entry",
+			"name": "Entry with text?"
         },
 		{
 			"type":"Text",

@@ -7,8 +7,9 @@
 		},
         {
             "type": "Picker",
+			"name": "Picker with text?",
             "items": [
-				"Option 1",
+				"Option 1"
 			]
         },
 		{
