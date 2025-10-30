@@ -7,7 +7,7 @@
 		},
         {
             "type": "Entry",
-			"name": "Entry with text?"
+			"question": "Entry with question?"
         },
 		{
 			"type":"Text",

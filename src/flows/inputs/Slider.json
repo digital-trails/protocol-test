@@ -7,7 +7,7 @@
 		},
         {
             "type": "Slider",
-			"name": "Slider with text?",
+			"question": "Slider with question?",
 			"min": 1,
 			"max": 7
         },
