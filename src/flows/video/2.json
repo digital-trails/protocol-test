@@ -2,7 +2,7 @@
     "header_text": "Video",
     "elements": [
         {
-            "type": "Label",
+            "type": "Text",
             "text": "Last page of video."
         }
     ]
