@@ -1,0 +1,9 @@
+{
+    "header_text": "Label",
+    "elements": [
+        {
+            "type": "Label",
+            "text": "Last page of video."
+        }
+    ]
+}
