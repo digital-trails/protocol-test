@@ -83,6 +83,13 @@
           "type": "tiles",
           "actions": [
             {
+              "text": "Video Flow",
+              "icon": "/assets/home_mindtrails.png",
+              "action": "flow://flows/video",
+              "backgroundcolor": "#1A206AFF",
+              "markcompleted": false
+            },
+            {
               "text": "inputs!",
               "icon": "/assets/home_mindtrails.png",
               "action": "flow://flows/inputs",
