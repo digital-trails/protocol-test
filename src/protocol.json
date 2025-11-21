@@ -164,7 +164,7 @@
         "survey": true,
         "path": "flow://flows/survey1",
         "title": "Survey Alert!",
-        "expiry": "5",
+        "expiry": "00:02:00",
         "message": "It's time for your survey1 survey"
       }
     },
