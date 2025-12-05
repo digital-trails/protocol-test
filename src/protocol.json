@@ -1,7 +1,20 @@
 {
-  "icon": "/assets/home_mindtrails.png",
+  "theme_light": {
+    "accent": "#007BFF",
+    "text": "#424242",
+    "primary": "#F5F5F5",
+    "secondary": "#FFFFFF",
+    "secondarybutton": "#EEEEEE"
+  },
+  "theme_dark": {
+    "accent": "#66B2FF",
+    "text": "#FFFFFF",
+    "primary": "#121212",
+    "secondary": "#202020",
+    "secondarybutton": "#333333"
+  },
+  "start_flow": "flow://flows/survey3",
   "home": {
-    "title": "MindTrails",
     "element": {
       "type": "list",
       "elements": [
@@ -70,6 +83,13 @@
           "type": "tiles",
           "actions": [
             {
+              "text": "Video Flow",
+              "icon": "/assets/home_mindtrails.png",
+              "action": "flow://flows/video",
+              "backgroundcolor": "#1A206AFF",
+              "markcompleted": false
+            },
+            {
               "text": "inputs!",
               "icon": "/assets/home_mindtrails.png",
               "action": "flow://flows/inputs",
@@ -109,50 +129,95 @@
     }
   ],
   "settings": {
-    "configs": "flow://flows/configs"
+    "configs": "flow://flows/configs.json"
   },
   "triggers": [
     {
-      "type": "timing",
-      "action": "notification",
-      "content": {
-        "path": "flow://flows/survey1"
-      },
-      "frequency": "00:05:00"
-    },
-    {
-      "type": "timing",
-      "action": "notification",
-      "frequency": "1",
-      "content": {
-        "time": "08:00",
-        "path": "flow://flows/survey2",
-        "expiry": "11:00"
+      "id": "trigger_1",
+      "type": "Reminder",
+      "threshold": "2.00:00:00",
+      "action": {
+        "type": "list",
+        "listtype": "sequential",
+        "actions": [
+          {
+            "type": "notification",
+            "path": "flow://flows/random1",
+            "title": "Reminder Alert!",
+            "message": "We noticed you haven’t completed your random1"
+          },
+          {
+            "type": "notification",
+            "path": "flow://flows/survey2",
+            "title": "Reminder Alert!",
+            "message": "We noticed you haven’t completed your survey2"
+          }
+        ]
       }
     },
     {
+      "type": "timing",
+      "id": "trigger_2",
+      "frequency": "00:05:00",
+      "action": {
+        "type": "notification",
+        "survey": true,
+        "path": "flow://flows/survey1",
+        "title": "Survey Alert!",
+        "expiry": "00:02:00",
+        "message": "It's time for your survey1 survey"
+      }
+    },
+    {
+      "id": "trigger_3",
+      "type": "timing",
+      "frequency": "1",
+      "time": "08:00",
+      "action": {
+        "type": "notification",
+        "survey": true,
+        "path": "flow://flows/survey2",
+        "expiry": "11:00",
+        "title": "Survey Alert!",
+        "message": "It's time for your survey2 survey"
+      }
+    },
+    {
+      "id": "trigger_4",
       "type": "random",
       "days": 7,
-      "action": "notification",
-      "actions": [
-        {
-          "default_time": "14:00",
-          "time": "${random1_time}",
-          "path": "flow://flows/random1",
-          "expiry": "11:00"
-        },
-        {
-          "default_time": "15:00",
-          "time": "${random2_time}",
-          "path": "flow://flows/random2",
-          "expiry": "11:00"
-        },
-        {
-          "default_time": "15:00",
-          "time": "${random3_time}",
-          "path": "flow://flows/random3"
-        }
-      ]
+      "choose": 3,
+      "time": "${random_time,15:00}",
+      "action": {
+        "type": "list",
+        "listtype": "random",
+        "actions": [
+          {
+            "type": "notification",
+            "survey": true,
+            "path": "flow://flows/random1",
+            "expiry": "18:00",
+            "title": "Survey Alert!",
+            "message": "It's time for your random1 survey"
+          },
+          {
+            "type": "notification",
+            "survey": true,
+            "path": "flow://flows/random2",
+            "expiry": "18:00",
+            "title": "Survey Alert!",
+            "message": "It's time for your random2 survey"
+          },
+          {
+            "type": "notification",
+            "survey": true,
+            "path": "flow://flows/random3",
+            "expiry": "18:00",
+            "title": "Survey Alert!",
+            "message": "It's time for your random3 survey"
+          }
+        ]
+      }
     }
   ],
   "probes": [
@@ -164,61 +229,6 @@
     }
   ],
   "devices": [
-    {
-      "type": "Oura",
-      "channel": "Api",
-      "path": "https://api.ouraring.com/v2/usercollection",
-      "androidsync": "deeplink://com.ouraring.oura",
-      "iossync": "deeplink://Oura://",
-      "endpoints": [
-        {
-          "path": "sleep",
-          "days": 1,
-          "writesdatum": true
-        },
-        {
-          "path": "workout",
-          "days": 1,
-          "writesdatum": true
-        },
-        {
-          "path": "daily_activity",
-          "days": 10,
-          "writesdatum": true,
-          "goals": [
-            {
-              "type": "percentile",
-              "show-loading": true,
-              "field": "active",
-              "days": 10,
-              "percentile": 0.6
-            }
-          ],
-          "triggers": [
-            {
-              "prompt": "Hi! We’ve noticed your tracker hasn’t recorded much data over the past two days. Please try to wear it as much as possible—ideally all day. If it’s not working or you’re having trouble, let us know so we can help.",
-              "timewindowdays": 1,
-              "aggregation": "sum",
-              "condition": [
-                "non_wear_time",
-                ">",
-                "36000"
-              ]
-            },
-            {
-              "prompt": "Hi! Your step count is low, make sure you to walk and stay active.",
-              "timewindowdays": 1,
-              "aggregation": "sum",
-              "condition": [
-                "steps",
-                "<",
-                "2000"
-              ]
-            }
-          ]
-        }
-      ]
-    },
     {
       "type": "WisePill",
       "channel": "Webhook",
