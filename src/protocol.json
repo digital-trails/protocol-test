@@ -13,7 +13,7 @@
     "secondary": "#202020",
     "secondarybutton": "#333333"
   },
-  "start_flow": "flow://flows/survey3",
+  "start_flow": "flow://flows/survey1",
   "home": {
     "element": {
       "type": "list",
