@@ -234,6 +234,7 @@
       "channel": "Webhook",
       "goals": [
         {
+          "id": "wisepill_goal",
           "type": "binarypercentage",
           "field": "event",
           "days": 7,
