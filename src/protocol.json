@@ -13,7 +13,7 @@
     "secondary": "#202020",
     "secondarybutton": "#333333"
   },
-  "start_flow": "flow://flows/survey3",
+  "start_flow": "flow://flows/survey1",
   "home": {
     "element": {
       "type": "list",
@@ -164,6 +164,7 @@
         "survey": true,
         "path": "flow://flows/survey1",
         "title": "Survey Alert!",
+        "expiry": "00:02:00",
         "message": "It's time for your survey1 survey"
       }
     },
@@ -233,6 +234,7 @@
       "channel": "Webhook",
       "goals": [
         {
+          "id": "wisepill_goal",
           "type": "binarypercentage",
           "field": "event",
           "days": 7,
