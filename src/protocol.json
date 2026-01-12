@@ -187,7 +187,7 @@
       "type": "random",
       "days": 7,
       "choose": 3,
-      "time": "${random_time,15:00}",
+      "time": "${global:random_time,15:00}",
       "action": {
         "type": "list",
         "listtype": "random",
