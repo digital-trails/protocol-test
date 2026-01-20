@@ -3,7 +3,8 @@
     "elements": [
 		{
 			"type":"Text",
-			"text":"Default Height"
+			"text":"Default Height",
+			"variable_name": "entry_input"
 		},
         {
             "type": "Entry",

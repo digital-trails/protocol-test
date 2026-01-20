@@ -21,7 +21,8 @@
             "items": [
 				"Option 1",
 				"Option 2"
-			]
+			],
+			"variable_name": "picker_input"
         },
 		{
 			"type": "Text",

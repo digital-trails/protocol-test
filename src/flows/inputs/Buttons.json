@@ -10,7 +10,8 @@
                 "Option 3",
                 "Prefer not to answer"
             ],
-            "selectable": true
+            "selectable": true,
+            "variable_name": "buttons_input"
         }
     ]
 }

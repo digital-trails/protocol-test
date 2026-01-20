@@ -9,7 +9,8 @@
             "type": "Slider",
 			"question": "Slider with question?",
 			"min": 1,
-			"max": 7
+			"max": 7,
+			"variable_name": "slider_input"
         },
 		{
 			"type":"Text",
