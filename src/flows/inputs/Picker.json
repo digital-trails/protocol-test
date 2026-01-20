@@ -7,7 +7,6 @@
 		},
         {
             "type": "Picker",
-			"question": "Picker with question?",
             "items": [
 				"Option 1"
 			]

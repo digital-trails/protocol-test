@@ -3,7 +3,6 @@
     "elements": [
         {
             "type": "Buttons",
-            "question": "Buttons with question?",
             "buttons": [
                 "Option 1",
                 "Option 2",

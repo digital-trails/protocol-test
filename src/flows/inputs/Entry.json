@@ -3,12 +3,11 @@
     "elements": [
 		{
 			"type":"Text",
-			"text":"Default Height",
-			"variable_name": "entry_input"
+			"text":"Default Height"
 		},
         {
             "type": "Entry",
-			"question": "Entry with question?"
+			"variable_name": "entry_input"
         },
 		{
 			"type":"Text",
