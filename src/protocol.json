@@ -91,9 +91,8 @@
           "backgroundcolor": "#1A206AFF",
           "reports": [
             {
-              "title": "survey 1",
-              "action": "flow://flows/survey2",
-              "report": true
+              "title": "survey 1, not a report",
+              "action": "flow://flows/survey2"
             },
             {
               "title": "survey 2",
