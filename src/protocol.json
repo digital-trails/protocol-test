@@ -92,12 +92,17 @@
           "reports": [
             {
               "title": "survey 1",
-              "action": "flow://flows/how%20was%20your%20day%3F",
+              "action": "flow://flows/survey2",
               "report": true
             },
             {
               "title": "survey 2",
               "action": "flow://flows/survey2",
+              "report": true
+            },
+             {
+              "title": "survey 3",
+              "action": "flow://flows/survey3",
               "report": true
             }
           ]
