@@ -22,7 +22,7 @@
           "type": "alert",
           "title": "Test Protocol",
           "message": "Test protocol description",
-          "icon": "/assets/home_banner.png"
+          "icon": "/assets/home_instructions.png"
         },
         {
           "type": "goals"
