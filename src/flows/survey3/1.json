@@ -11,11 +11,12 @@
             "buttons": [
                 "0::Mars",
                 "1::Venus",
-                "2::Mercury",
+                "2::Mercury"
             ],
             "selectable": true,
             "multi_select": true,
-            "name": "race"
+            "report": "Planet",
+            "variable_name": "survey3_planet"
         }
     ]
 }

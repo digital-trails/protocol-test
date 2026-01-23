@@ -8,6 +8,8 @@
         },
         {
             "type": "Picker",
+            "report": "Birth year",
+            "variable_name": "survey2_picker",
             "items": [
                 "1935 or before",
                 "1936",
@@ -79,7 +81,7 @@
                 "2002",
                 "2003",
                 "2004"
-            ],
+            ]
         }
     ]
 }
