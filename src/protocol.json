@@ -24,7 +24,7 @@
         },
         {
           "type": "sessions",
-          "backgroundcolor": "#1A5C2FDA",
+          "backgroundcolor": "#1A00C2FF",
           "left": {
             "text": "{0} Sessions Completed",
             "icon": {
