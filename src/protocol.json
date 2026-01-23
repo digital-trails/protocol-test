@@ -19,6 +19,12 @@
       "type": "list",
       "elements": [
         {
+          "type": "alert",
+          "title": "Test Protocol",
+          "message": "Test protocol description",
+          "icon": "/assets/home_banner.png"
+        },
+        {
           "type": "goals"
         },
         {
