@@ -19,12 +19,10 @@
       "type": "list",
       "elements": [
         {
-          "type": "goals",
-          "backgroundcolor": "#1A5C2FDA",
+          "type": "goals"
         },
         {
-          "type": "sessions",
-          "backgroundcolor": "#1A00C2FF",
+          "type": "sessions"
           "left": {
             "text": "{0} Sessions Completed",
             "icon": {
@@ -81,6 +79,23 @@
             }
           ]
         },
+        {
+          "type": "reports",
+          "title": "Reports",
+          "backgroundcolor": "#1A206AFF",
+          "reports": [
+            {
+              "title": "survey 1",
+              "action": "flow://flows/how%20was%20your%20day%3F",
+              "report": true
+            },
+            {
+              "title": "survey 2",
+              "action": "flow://flows/survey2",
+              "report": true
+            }
+          ]
+        }
         {
           "type": "tiles",
           "actions": [
