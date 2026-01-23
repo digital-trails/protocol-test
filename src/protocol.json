@@ -22,7 +22,7 @@
           "type": "goals"
         },
         {
-          "type": "sessions"
+          "type": "sessions",
           "left": {
             "text": "{0} Sessions Completed",
             "icon": {
@@ -95,7 +95,7 @@
               "report": true
             }
           ]
-        }
+        },
         {
           "type": "tiles",
           "actions": [
