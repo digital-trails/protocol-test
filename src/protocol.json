@@ -19,10 +19,12 @@
       "type": "list",
       "elements": [
         {
-          "type": "goals"
+          "type": "goals",
+          "backgroundcolor": "#1A5C2FDA",
         },
         {
           "type": "sessions",
+          "backgroundcolor": "#1A5C2FDA",
           "left": {
             "text": "{0} Sessions Completed",
             "icon": {
@@ -108,13 +110,6 @@
               "icon": "/assets/home_resources.png",
               "action": "flow://flows/survey2",
               "backgroundcolor": "#1A00C2FF",
-              "markcompleted": true
-            },
-            {
-              "text": "survey 3",
-              "icon": "/assets/home_anxiety.png",
-              "action": "flow://flows/survey3",
-              "backgroundcolor": "#1A5C2FDA",
               "markcompleted": true
             }
           ]
