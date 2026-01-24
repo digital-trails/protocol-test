@@ -46,9 +46,9 @@
           }
         },
         {
-          "type": "button",
+          "type": "survey",
           "action": {
-            "text": "Show Survey Modal",
+            "text": "Surveys",
             "action": "navmodal://Survey"
           }
         },
