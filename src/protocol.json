@@ -54,6 +54,7 @@
         },
         {
           "type": "carousel",
+          "title": "Carousel header",
           "actions": [
             {
               "text": "inputs!",
@@ -99,7 +100,7 @@
               "action": "flow://flows/survey2",
               "report": true
             },
-             {
+            {
               "title": "survey 3",
               "action": "flow://flows/survey3",
               "report": true
