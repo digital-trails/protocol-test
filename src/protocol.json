@@ -46,7 +46,7 @@
           }
         },
         {
-          "type": "survey",
+          "type": "button",
           "action": {
             "text": "Surveys",
             "action": "navmodal://Survey"
