@@ -1,4 +1,8 @@
 {
+  "completeconfig": {
+    "type": "time",
+    "duration": "00:00:05"
+  },
   "theme_light": {
     "accent": "#007BFF",
     "text": "#424242",
@@ -109,6 +113,7 @@
         },
         {
           "type": "tiles",
+          "title": "Tiles header",
           "actions": [
             {
               "text": "Video Flow",
