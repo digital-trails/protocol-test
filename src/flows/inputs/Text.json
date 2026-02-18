@@ -6,7 +6,7 @@
             "html": true,
             "text": "<p><b>This is marked as HTML</b></p>"
         },
-		{
+        {
             "type": "Text",
             "html": false,
             "text": "<p><b>This is not marked as HTML</b></p>"
@@ -18,14 +18,8 @@
         },
         {
             "type": "Text",
-            "label_type": "Title",
-            "font_size": 12,
-            "text": "Label type Title with font size 12"
-        },
-        {
-            "type": "Text",
             "label_type": "Subtitle",
-            "text": "Label type SubSubtitletitle"
+            "text": "Label type Subtitle"
         },
         {
             "type": "Text",
@@ -34,8 +28,19 @@
         },
         {
             "type": "Text",
+            "label_type": "SubText",
+            "text": "Label type SubText"
+        },
+        {
+            "type": "Text",
             "label_type": "Link",
             "text": "Label type Link"
+        },
+        {
+            "type": "Text",
+            "label_type": "Title",
+            "font_size": 12,
+            "text": "Label type Title with font size 12"
         }
     ]
 }
