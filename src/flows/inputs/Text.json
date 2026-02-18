@@ -18,6 +18,12 @@
         },
         {
             "type": "Text",
+            "label_type": "Title",
+            "font_size": 12,
+            "text": "Label type Title with font size 12"
+        },
+        {
+            "type": "Text",
             "label_type": "Subtitle",
             "text": "Label type SubSubtitletitle"
         },
