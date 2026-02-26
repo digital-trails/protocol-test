@@ -46,7 +46,7 @@
           }
         },
         {
-          "type": "button",
+          "type": "survey",
           "action": {
             "text": "Surveys",
             "action": "navmodal://Survey"
@@ -153,93 +153,38 @@
   "settings": {
     "configs": "flow://flows/configs.json"
   },
-  "triggers": [
-    {
-      "id": "trigger_1",
-      "type": "Reminder",
-      "threshold": "2.00:00:00",
-      "action": {
-        "type": "list",
-        "listtype": "sequential",
-        "actions": [
-          {
-            "type": "notification",
-            "path": "flow://flows/random1",
-            "title": "Reminder Alert!",
-            "message": "We noticed you haven’t completed your random1"
-          },
-          {
-            "type": "notification",
-            "path": "flow://flows/survey2",
-            "title": "Reminder Alert!",
-            "message": "We noticed you haven’t completed your survey2"
-          }
-        ]
-      }
-    },
-    {
-      "type": "timing",
-      "id": "trigger_2",
+  "surveys": {
+    "survey_1": {
+      "type": "frequency",
       "frequency": "00:05:00",
-      "action": {
-        "type": "notification",
-        "survey": true,
-        "path": "flow://flows/survey1",
-        "title": "Survey Alert!",
-        "expiry": "00:02:00",
-        "message": "It's time for your survey1 survey"
-      }
+      "path": "flow://flows/survey1",
+      "expiry": "00:02:00"
     },
-    {
-      "id": "trigger_3",
-      "type": "timing",
-      "frequency": "1",
-      "time": "08:00",
-      "action": {
-        "type": "notification",
-        "survey": true,
-        "path": "flow://flows/survey2",
-        "expiry": "11:00",
-        "title": "Survey Alert!",
-        "message": "It's time for your survey2 survey"
-      }
+    "survey_2": {
+      "type": "frequency",
+      "frequency": "14",
+      "time": "20:00",
+      "skip": 1,
+      "path": "flow://flows/survey2"
     },
-    {
-      "id": "trigger_4",
+    "survey_3": {
       "type": "random",
-      "days": 7,
+      "period": "00:10:00",
       "choose": 3,
       "time": "${global:random_time,15:00}",
-      "action": {
-        "type": "list",
-        "listtype": "random",
-        "actions": [
-          {
-            "type": "notification",
-            "survey": true,
-            "path": "flow://flows/random1",
-            "expiry": "18:00",
-            "title": "Survey Alert!",
-            "message": "It's time for your random1 survey"
-          },
-          {
-            "type": "notification",
-            "survey": true,
-            "path": "flow://flows/random2",
-            "expiry": "18:00",
-            "title": "Survey Alert!",
-            "message": "It's time for your random2 survey"
-          },
-          {
-            "type": "notification",
-            "survey": true,
-            "path": "flow://flows/random3",
-            "expiry": "18:00",
-            "title": "Survey Alert!",
-            "message": "It's time for your random3 survey"
-          }
-        ]
-      }
+      "paths": [
+        "flow://flows/random1",
+        "flow://flows/random2",
+        "flow://flows/random3"
+      ]
+    }
+  },
+  "reminders": [
+    {
+      "type": "survey",
+      "id": "survey_1",
+      "frequency": "00:01:00",
+      "take": 2
     }
   ],
   "probes": [
