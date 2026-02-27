@@ -182,7 +182,7 @@
   "reminders": [
     {
       "type": "survey",
-      "id": "survey_1",
+      "survey_id": "survey_1",
       "frequency": "00:01:00",
       "take": 2
     }
