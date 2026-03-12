@@ -13,9 +13,6 @@
     "secondary": "#202020",
     "secondarybutton": "#333333"
   },
-  "config-queues": {
-    "group": "mtm${global:population}group"
-  },
   "start_flow": "flow://flows/survey1",
   "home": {
     "element": {
