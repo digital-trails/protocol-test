@@ -17,7 +17,7 @@
             "days_ahead": 1,
             "action": "flow://flows/survey1",
             "count": 2,
-            "show_time": false
+            "has_time": false
         }
     ]
 }
