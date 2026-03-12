@@ -179,14 +179,14 @@
       ]
     }
   },
-  "reminders": [
-    {
+  "reminders": {
+    "reminder_1": {
       "type": "survey",
       "survey_id": "survey_1",
       "frequency": "00:01:00",
       "take": 2
     }
-  ],
+  },
   "probes": [
     {
       "type": "Location",
