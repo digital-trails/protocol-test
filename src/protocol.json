@@ -2,8 +2,8 @@
   "theme_light": {
     "accent": "#007BFF",
     "text": "#424242",
-    "primary": "#F5F5F5",
-    "secondary": "#FFFFFF",
+    "primary": "#FFFFFF",
+    "secondary": "#F5F5F5",
     "secondarybutton": "#EEEEEE"
   },
   "theme_dark": {
