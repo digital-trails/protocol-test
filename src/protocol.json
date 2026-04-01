@@ -4,14 +4,18 @@
     "text": "#424242",
     "primary": "#FFFFFF",
     "secondary": "#F5F5F5",
-    "secondarybutton": "#EEEEEE"
+    "secondarybutton": "#EEEEEE",
+    "destructivecolor": "#FF3B30",
+    "successcolor": "#34C759"
   },
   "theme_dark": {
     "accent": "#66B2FF",
     "text": "#FFFFFF",
     "primary": "#121212",
     "secondary": "#202020",
-    "secondarybutton": "#333333"
+    "secondarybutton": "#333333",
+    "destructivecolor": "#FF453A",
+    "successcolor": "#30D158"
   },
   "start_flow": "flow://flows/survey1",
   "home": {
