@@ -5,8 +5,8 @@
     "primary": "#FFFFFF",
     "secondary": "#F5F5F5",
     "secondarybutton": "#EEEEEE",
-    "destructivecolor": "#FF3B30",
-    "successcolor": "#34C759"
+    "destructive": "#FF3B30",
+    "success": "#34C759"
   },
   "theme_dark": {
     "accent": "#66B2FF",
@@ -14,8 +14,8 @@
     "primary": "#121212",
     "secondary": "#202020",
     "secondarybutton": "#333333",
-    "destructivecolor": "#FF453A",
-    "successcolor": "#30D158"
+    "destructive": "#FF453A",
+    "success": "#30D158"
   },
   "start_flow": "flow://flows/survey1",
   "home": {
