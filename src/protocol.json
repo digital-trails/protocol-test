@@ -155,7 +155,7 @@
     },
 	{
       "text": "Long",
-      "icon": "/assets/menu_home.png"
+      "icon": "/assets/menu_home.png",
 	  "action": "flow://flows/long"
     }
   ],
