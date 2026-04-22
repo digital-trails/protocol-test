@@ -152,6 +152,11 @@
     {
       "text": "Home",
       "icon": "/assets/menu_home.png"
+    },
+	{
+      "text": "Long",
+      "icon": "/assets/menu_home.png"
+	  "action": "flow://flows/long"
     }
   ],
   "settings": {
