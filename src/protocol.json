@@ -32,6 +32,7 @@
           "type": "devices",
           "summary": [
             {
+              "device_id": "device_1",
               "text": "Oura Ring",
               "icon": {
                 "url": "/assets/oura.png"
