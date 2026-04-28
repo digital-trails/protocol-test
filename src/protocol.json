@@ -29,7 +29,15 @@
           "icon": "/assets/home_instructions.png"
         },
         {
-          "type": "goals"
+          "type": "devices",
+          "summary": [
+            {
+              "text": "Oura Ring",
+              "icon": {
+                "url": "/assets/oura.png"
+              }
+            }
+          ]
         },
         {
           "type": "sessions",
@@ -153,10 +161,10 @@
       "text": "Home",
       "icon": "/assets/menu_home.png"
     },
-	{
+    {
       "text": "Long",
       "icon": "/assets/menu_home.png",
-	  "action": "flow://flows/long"
+      "action": "flow://flows/long"
     }
   ],
   "settings": {
@@ -204,41 +212,29 @@
       "accuracy": 5
     }
   ],
-  "devices": [
-    {
-      "type": "WisePill",
-      "channel": "Webhook",
-      "goals": [
-        {
-          "id": "wisepill_goal",
-          "type": "binarypercentage",
-          "field": "event",
-          "days": 7,
-          "bounds": [
-            {
-              "lower-bound": 0,
-              "upper-bound": 0.6,
-              "text": "You're missing several doses. Please try to take your medication more consistently.",
-              "summary": "Low Adherence",
-              "color": "#ff9187"
-            },
-            {
-              "lower-bound": 0.6,
-              "upper-bound": 0.8,
-              "text": "You're taking most of your doses. A little more consistency will help.",
-              "summary": "Moderate Adherence",
-              "color": "#F5E050"
-            },
-            {
-              "lower-bound": 0.8,
-              "upper-bound": 1,
-              "text": "You're consistently taking your medication. Keep it up!",
-              "summary": "High Adherence",
-              "color": "#65bf65"
-            }
-          ]
-        }
+  "devices": {
+    "device_1": {
+      "type": "Oura",
+      "webhook_data_types": [
+        "tag",
+        "daily_activity",
+        "sleep"
+      ],
+      "scopes": [
+        "tag",
+        "daily",
+        "sleep"
       ]
     }
-  ]
+  },
+  "goals": {
+    "goal_1": {
+      "device_id": "device_1",
+      "data_type": "daily_activity",
+      "type": "percentile",
+      "field": "steps",
+      "required_days": 7,
+      "percentile": 0.6
+    }
+  }
 }
