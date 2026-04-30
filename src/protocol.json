@@ -37,6 +37,13 @@
               "icon": {
                 "url": "/assets/oura.png"
               }
+            },
+            {
+              "device_id": "device_2",
+              "text": "WisePill",
+              "icon": {
+                "url": "/assets/wisepill.png"
+              }
             }
           ]
         },
@@ -216,16 +223,17 @@
   "devices": {
     "device_1": {
       "type": "Oura",
-      "webhook_data_types": [
-        "tag",
-        "daily_activity",
-        "sleep"
-      ],
-      "scopes": [
-        "tag",
-        "daily",
-        "sleep"
-      ]
+      "connect_title": "Login to Oura",
+      "connect_description": "This study requires Oura integration. We are about to send you to Oura to authenticate and then you will be redirected back to our app",
+      "android_sync": "deeplink://com.ouraring.oura",
+      "ios_sync": "deeplink://Oura://",
+      "webhook_data_types": ["tag", "daily_activity", "workout", "sleep"],
+      "scopes": ["tag", "daily", "workout", "sleep", "ring_configuration"]
+    },
+    "device_2": {
+      "type": "WisePill",
+      "connect_title": "Enter imei number",
+      "connect_description": "Enter imei number of your WisePill box to connect. This will allow us to track when you take your medication and send you reminders if you forget.",
     }
   },
   "goals": {
@@ -236,6 +244,14 @@
       "field": "steps",
       "required_days": 7,
       "percentile": 0.6
+    },
+    "goal_2": {
+      "device_id": "device_2",
+      "data_type": "delta-read",
+      "type": "percentage",
+      "field": "event",
+      "required_days": 7,
+      "target_value": 1
     }
   }
 }
