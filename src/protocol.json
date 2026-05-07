@@ -227,13 +227,52 @@
       "connect_description": "This study requires Oura integration. We are about to send you to Oura to authenticate and then you will be redirected back to our app",
       "android_sync": "deeplink://com.ouraring.oura",
       "ios_sync": "deeplink://Oura://",
-      "webhook_data_types": ["tag", "daily_activity", "workout", "sleep"],
-      "scopes": ["tag", "daily", "workout", "sleep", "ring_configuration"]
+      "webhook_data_types": [
+        "tag",
+        "daily_activity",
+        "workout",
+        "sleep"
+      ],
+      "scopes": [
+        "tag",
+        "daily",
+        "workout",
+        "sleep",
+        "ring_configuration"
+      ],
+      "triggers": [
+        {
+          "data_type": "daily_activity",
+          "days": 1,
+          "condition": [
+            "non_wear_time",
+            "<",
+            "36000"
+          ],
+          "notification": {
+            "title": "Tracker Alert!",
+            "description": "Hi! We’ve noticed your tracker hasn’t recorded much data over the past two days. Please try to wear it as much as possible—ideally all day. If it’s not working or you’re having trouble, let us know so we can help"
+          }
+        },
+        {
+          "data_type": "daily_activity",
+          "days": 1,
+          "condition": [
+            "steps",
+            "<",
+            "2000"
+          ],
+          "notification": {
+            "title": "Tracker Alert!",
+            "description": "Hi! Your step count is low, make sure you to walk and stay active."
+          }
+        }
+      ]
     },
     "device_2": {
       "type": "WisePill",
       "connect_title": "Enter imei number",
-      "connect_description": "Enter imei number of your WisePill box to connect. This will allow us to track when you take your medication and send you reminders if you forget.",
+      "connect_description": "Enter imei number of your WisePill box to connect. This will allow us to track when you take your medication and send you reminders if you forget."
     }
   },
   "goals": {
