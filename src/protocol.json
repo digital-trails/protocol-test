@@ -271,6 +271,7 @@
   },
   "jobs": {
     "oura_job_1": {
+      "type": "device",
       "service": "Oura",
       "data_type": "daily_activity",
       "days": 1,
@@ -285,6 +286,7 @@
       }
     },
     "oura_job_2": {
+      "type": "device",
       "service": "Oura",
       "data_type": "daily_activity",
       "days": 1,
