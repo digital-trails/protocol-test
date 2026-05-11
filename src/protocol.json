@@ -240,35 +240,9 @@
         "sleep",
         "ring_configuration"
       ],
-      "triggers": [
-        {
-          "data_type": "daily_activity",
-          "days": 1,
-          "condition": [
-            "non_wear_time",
-            "<",
-            "36000"
-          ],
-          "notification": {
-            "type": "Message",
-            "title": "Tracker Alert!",
-            "message": "Hi! We’ve noticed your tracker hasn’t recorded much data over the past two days. Please try to wear it as much as possible—ideally all day. If it’s not working or you’re having trouble, let us know so we can help"
-          }
-        },
-        {
-          "data_type": "daily_activity",
-          "days": 1,
-          "condition": [
-            "steps",
-            "<",
-            "2000"
-          ],
-          "notification": {
-            "type": "Message",
-            "title": "Tracker Alert!",
-            "message": "Hi! Your step count is low, make sure you to walk and stay active."
-          }
-        }
+      "jobs": [
+        "oura_job_1",
+        "oura_job_2"
       ]
     },
     "device_2": {
@@ -293,6 +267,36 @@
       "field": "event",
       "required_days": 7,
       "target_value": 1
+    }
+  },
+  "jobs": {
+    "oura_job_1": {
+      "service": "Oura",
+      "data_type": "daily_activity",
+      "days": 1,
+      "condition": [
+        "non_wear_time",
+        "<",
+        "36000"
+      ],
+      "notification": {
+        "title": "Tracker Alert!",
+        "description": "Hi! We’ve noticed your tracker hasn’t recorded much data over the past two days. Please try to wear it as much as possible—ideally all day. If it’s not working or you’re having trouble, let us know so we can help"
+      }
+    },
+    "oura_job_2": {
+      "service": "Oura",
+      "data_type": "daily_activity",
+      "days": 1,
+      "condition": [
+        "steps",
+        "<",
+        "2000"
+      ],
+      "notification": {
+        "title": "Tracker Alert!",
+        "description": "Hi! Your step count is low, make sure you to walk and stay active."
+      }
     }
   }
 }
