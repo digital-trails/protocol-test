@@ -297,12 +297,18 @@
   },
   "notifications": {
     "notification_1": {
+      "type": "remote",
+      "expiry": "1",
       "title": "Tracker Alert!",
-      "message": "Hi! We’ve noticed your tracker hasn’t recorded much data over the past two days. Please try to wear it as much as possible—ideally all day. If it’s not working or you’re having trouble, let us know so we can help"
+      "message": "Hi! We’ve noticed your tracker hasn’t recorded much data over the past two days. Please try to wear it as much as possible—ideally all day. If it’s not working or you’re having trouble, let us know so we can help",
+      "action": "navpage://Devices"
     },
     "notification_2": {
+      "type": "remote",
+      "expiry": "1",
       "title": "Tracker Alert!",
-      "message": "Hi! Your step count is low, make sure you to walk and stay active."
+      "message": "Hi! Your step count is low, make sure you to walk and stay active.",
+      "action": "navpage://Devices"
     }
   }
 }
