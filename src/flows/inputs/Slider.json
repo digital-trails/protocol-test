@@ -43,7 +43,21 @@
 		},
 		{
 			"type": "Text",
-			"text": "With 'Labels"
+			"text": "With 2 Labels"
+		},
+		{
+			"type": "Slider",
+			"min": 1,
+			"max": 7,
+			"labels": [
+				"Feels Good",
+				"Feels Bad"
+			],
+			"variable_name": "2_labeled_slider_input"
+		},
+		{
+			"type": "Text",
+			"text": "With 3 Labels"
 		},
 		{
 			"type": "Slider",
@@ -54,7 +68,7 @@
 				"Feels Okay",
 				"Feels Bad"
 			],
-			"variable_name": "labeled_slider_input"
+			"variable_name": "3_labeled_slider_input"
 		}
 	]
 }
