@@ -1,0 +1,16 @@
+{
+    "header_text": "ImagePicker",
+    "elements": [
+        {
+            "type": "ImagePicker",
+            "items": [
+				{
+                    "url": "/assets/wisepill.png"
+                },
+                {
+                    "url": "/assets/oura.png"
+                }
+			]
+        }
+    ]
+}
