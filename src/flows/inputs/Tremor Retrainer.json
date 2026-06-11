@@ -1,0 +1,10 @@
+{
+	"header_text": "Text Entry",
+	"elements": [
+		{
+			"type": "TremorRetrainer",
+            "session_length": 60000,
+            "sampling_length": 5000
+		}
+	]
+}
