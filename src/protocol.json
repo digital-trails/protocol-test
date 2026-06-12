@@ -218,6 +218,22 @@
       "optional": true,
       "interval": "00:00:01",
       "accuracy": 5
+    },
+    {
+      "type": "Accelerometer",
+      "optional": true,
+      "interval": "00:00:01",
+      "speed": "Game"
+    },
+    {
+      "type": "Battery",
+      "optional": true,
+      "interval": "00:00:01"
+    },
+    {
+      "type": "AmbientLight",
+      "optional": true,
+      "interval": "00:00:01"
     }
   ],
   "devices": {
