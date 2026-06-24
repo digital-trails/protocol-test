@@ -25,7 +25,7 @@
         {
           "type": "alert",
           "title": "Test Protocol",
-          "message": "Test protocol description. If downloaded via invitation, the following variables should be populated. Population: ${global:population}, Group: ${global:group}",
+          "message": "assignment_1: ${global:assignment_1}",
           "icon": "/assets/home_instructions.png"
         },
         {
