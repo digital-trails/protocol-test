@@ -278,7 +278,7 @@
     },
     "goal_2": {
       "device_id": "device_2",
-      "data_type": "delta-read",
+      "data_type": "datums",
       "type": "percentage",
       "field": "event",
       "required_days": 7,
