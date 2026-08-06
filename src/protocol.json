@@ -202,6 +202,12 @@
         "flow://flows/random2",
         "flow://flows/random3"
       ]
+    },
+    "survey_4": {
+      "type": "cron",
+      "frequency": "*/2 * * * *",
+      "path": "flow://flows/cron",
+      "expiry": "00:01:00"
     }
   },
   "reminders": {
