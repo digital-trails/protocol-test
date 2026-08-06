@@ -204,7 +204,7 @@
     },
     "survey_4": {
       "type": "cron",
-      "frequency": "*/2 * * * *",
+      "cron": "*/2 * * * *",
       "path": "flow://flows/cron",
       "expiry": "00:01:00"
     }
