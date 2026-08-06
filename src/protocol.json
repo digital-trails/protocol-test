@@ -107,23 +107,22 @@
           ]
         },
         {
-          "type": "reports",
-          "title": "Reports",
-          "backgroundcolor": "#1A206AFF",
-          "reports": [
+          "type": "sublist",
+          "title": "Sub List",
+          "icon": "/assets/home_anxiety.png",
+          "actions": [
             {
-              "title": "survey 1, not a report",
+              "text": "survey 1, not a report",
               "action": "flow://flows/survey2"
             },
             {
-              "title": "survey 2",
+              "text": "survey 2",
               "action": "flow://flows/survey2",
               "report": true
             },
             {
-              "title": "survey 3",
-              "action": "flow://flows/survey3",
-              "report": true
+              "text": "survey 3",
+              "action": "flow://flows/survey3"
             }
           ]
         },
