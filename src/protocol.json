@@ -204,7 +204,8 @@
     },
     "survey_4": {
       "type": "cron",
-      "cron": "*/2 * * * *",
+      "cron": "0 * * * *",
+      "span": "01:00:00",
       "path": "flow://flows/cron",
       "expiry": "00:01:00"
     }
