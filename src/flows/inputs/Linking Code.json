@@ -12,10 +12,5 @@
             "variable_name": "linking_code",
             "report": "Linking code"
         }
-    ],
-    "navigators": [
-        {
-            "type": "waitforcomplete"
-        }
     ]
 }
