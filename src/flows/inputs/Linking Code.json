@@ -3,11 +3,6 @@
     "elements": [
         {
             "type": "linkingcode",
-            "codes": [
-                "P182",
-                "K93X",
-                "7QRT"
-            ],
             "placeholder": "Enter your linking code.",
             "variable_name": "linking_code",
             "report": "Linking code"
