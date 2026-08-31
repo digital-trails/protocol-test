@@ -1,22 +1,11 @@
 {
-  "theme_light": {
-    "accent": "#007BFF",
-    "text": "#424242",
-    "primary": "#FFFFFF",
-    "secondary": "#F5F5F5",
-    "secondarybutton": "#EEEEEE",
-    "destructive": "#FF3B30",
-    "success": "#34C759"
-  },
-  "theme_dark": {
-    "accent": "#66B2FF",
-    "text": "#FFFFFF",
-    "primary": "#121212",
-    "secondary": "#202020",
-    "secondarybutton": "#333333",
-    "destructive": "#FF453A",
-    "success": "#30D158"
-  },
+  "enabled_roles": ["Participant"],
+  "message_rules": [
+    {
+    "from_role": "Participant",
+    "can_message_roles": ["Admin", "Member"]
+    }
+  ],
   "start_flow": "flow://flows/survey1",
   "home": {
     "element": {
